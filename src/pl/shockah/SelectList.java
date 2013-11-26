@@ -46,6 +46,11 @@ public class SelectList<T> implements List<T> {
 		currentI = index;
 		current = list.get(currentI);
 	}
+	public void setCurrentIndex(int index) {
+		if (index > list.size()-1 || index < 0) return;
+		currentI = index;
+		current = list.get(currentI);
+	}
 	public T getCurrent() {
 		setup();
 		return current;
