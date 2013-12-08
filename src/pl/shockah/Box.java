@@ -1,6 +1,6 @@
 package pl.shockah;
 
-public class Box<T> {
+public final class Box<T> {
 	public T value;
 	
 	public Box() {this(null);}
