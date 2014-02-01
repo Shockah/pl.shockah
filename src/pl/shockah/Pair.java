@@ -34,4 +34,8 @@ public class Pair<A,B> {
 
 	public B get2() {return second;}
 	public void set2(B second) {this.second = second;}
+	
+	public Object[] getBoth() {return new Object[]{first,second};}
+	public void setBoth(Pair<A,B> pair) {setBoth(pair.get1(),pair.get2());}
+	public void setBoth(A first, B second) {this.first = first; this.second = second;}
 }
