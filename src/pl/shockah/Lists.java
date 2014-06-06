@@ -22,4 +22,7 @@ public final class Lists {
 		for (Object o : list) if (o != null && cls.isAssignableFrom(o.getClass())) ret.add((V)o);
 		return ret;
 	}
+	@SuppressWarnings("unchecked") public static <K> List<K> as(List<?> list, Class<K> cls) {
+		return (List<K>)list;
+	}
 }
