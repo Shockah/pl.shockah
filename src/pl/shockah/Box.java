@@ -1,7 +1,7 @@
 package pl.shockah;
 
 public class Box<T> {
-	protected T value;
+	public T value;
 	
 	public Box() {this(null);}
 	public Box(T t) {
@@ -17,7 +17,4 @@ public class Box<T> {
 	public String toString() {
 		return "[Box: "+value+"]";
 	}
-	
-	public T get() {return value;}
-	public void set(T t) {value = t;}
 }
