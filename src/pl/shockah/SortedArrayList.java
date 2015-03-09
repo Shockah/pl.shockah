@@ -1,21 +1,27 @@
 package pl.shockah;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.ListIterator;
 
-public class SortedLinkedList<E> extends LinkedList<E> {
-	private static final long serialVersionUID = -4751208078850005267L;
+public class SortedArrayList<E> extends ArrayList<E> {
+	private static final long serialVersionUID = -7376307043586688296L;
 	
 	protected final Comparator<E> comparator;
 	
-	public SortedLinkedList() {
-		super();
-		comparator = null;
+	public SortedArrayList() {
+		this(null);
 	}
-	public SortedLinkedList(Comparator<E> comparator) {
+	public SortedArrayList(int size) {
+		this(size, null);
+	}
+	public SortedArrayList(Comparator<E> comparator) {
 		super();
+		this.comparator = comparator;
+	}
+	public SortedArrayList(int size, Comparator<E> comparator) {
+		super(size);
 		this.comparator = comparator;
 	}
 	
@@ -39,13 +45,6 @@ public class SortedLinkedList<E> extends LinkedList<E> {
 		super.add(e);
 		return true;
 	}
-	public boolean offer(E e) {
-		add(e);
-		return true;
-	}
-	public void push(E e) {
-		add(e);
-	}
 	
 	public boolean addAll(Collection<? extends E> c)  {
 		for (E e : c) add(e);
@@ -61,18 +60,6 @@ public class SortedLinkedList<E> extends LinkedList<E> {
 		throw new UnsupportedOperationException();
 	}
 	public boolean addAll(int index, Collection<? extends E> c) {
-		throw new UnsupportedOperationException();
-	}
-	public void addFirst(E e) {
-		throw new UnsupportedOperationException();
-	}
-	public void addLast(E e) {
-		throw new UnsupportedOperationException();
-	}
-	public boolean offerFirst(E e) {
-		throw new UnsupportedOperationException();
-	}
-	public boolean offerLast(E e) {
 		throw new UnsupportedOperationException();
 	}
 	public E set(int index, E element) {
