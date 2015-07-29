@@ -11,7 +11,8 @@ public class BinBufferInputStream extends InputStream {
 	}
 	
 	public int read() throws IOException {
-		if (binb.bytesLeft() > 0) return binb.readByte();
+		if (binb.bytesLeft() > 0)
+			return binb.readByte();
 		return -1;
 	}
 }

@@ -2,7 +2,7 @@ package pl.shockah;
 
 public class PairNonOrdered<A> extends Pair<A,A> {
 	public PairNonOrdered(A first, A second) {
-		super(first,second);
+		super(first, second);
 	}
 	
 	public boolean equals(Object instance) {
@@ -14,6 +14,6 @@ public class PairNonOrdered<A> extends Pair<A,A> {
 	}
 	
 	public PairNonOrdered<A> reverse() {
-		return new PairNonOrdered<>(get2(),get1());
+		return new PairNonOrdered<>(b, a);
 	}
 }
